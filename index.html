@@ -1,3 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逍遥镇小杜庄村 - 河南省西华县美丽乡村</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32', // 农业绿色
+                        secondary: '#F57C00', // 丰收橙色
+                        accent: '#1976D2', // 科技蓝色
+                        warm: '#FFB74D', // 温暖黄色
+                        dark: '#1B5E20', // 深绿
+                        light: '#F1F8E9', // 浅绿背景
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 顶部导航 -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                            <i class="fa fa-home text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold text-primary">小杜庄村</h1>
+                            <p class="text-xs text-gray-500">河南省西华县逍遥镇</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-primary hover:text-secondary transition-colors font-medium">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors font-medium">村庄概况</a>
+                    <a href="#industries" class="text-gray-700 hover:text-primary transition-colors font-medium">特色产业</a>
+                    <a href="#talents" class="text-gray-700 hover:text-primary transition-colors font-medium">杰出人才</a>
+                    <a href="#enterprises" class="text-gray-700 hover:text-primary transition-colors font-medium">龙头企业</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-primary transition-colors font-medium">美丽乡村</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors font-medium">联系我们</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-primary">
+                        <i class="fa fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header id="home" class="relative h-[70vh] min-h-[600px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1500382017468-2b59237918f6?w=1920&h=1080&fit=crop" alt="小杜庄村全景" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/70 to-dark/50"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="flex items-center mb-4">
+                    <span class="bg-secondary/90 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        河南省美丽乡村建设示范村
+                    </span>
+                </div>
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-white mb-6 leading-tight text-shadow">
+                    逍遥镇·小杜庄
+                </h1>
+                <p class="text-[clamp(1.2rem,2vw,1.5rem)] text-white/90 mb-8">
+                    沙颍河畔的美丽村庄，特色农业兴旺，人才辈出，产业兴旺，人民安居乐业
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#industries" class="bg-secondary hover:bg-secondary/90 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+                        <i class="fa fa-leaf mr-2"></i> 特色产业
+                    </a>
+                    <a href="#talents" class="bg-white hover:bg-gray-50 text-primary px-8 py-3 rounded-lg font-medium transition-all shadow hover:shadow-md">
+                        <i class="fa fa-user-tie mr-2"></i> 杰出人才
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 村庄荣誉 -->
+    <section class="py-8 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                    <p class="text-gray-600">总人口</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-primary mb-2">2000+亩</div>
+                    <p class="text-gray-600">耕地面积</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-primary mb-2">3000万</div>
+                    <p class="text-gray-600">年生产总值</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-primary mb-2">98%</div>
+                    <p class="text-gray-600">村民满意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 村庄概况 -->
+    <section id="about" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <span class="text-primary font-semibold">村庄概况</span>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6 mt-2">沙颍河畔的美丽乡村</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        小杜庄村位于河南省周口市西华县逍遥镇，地处沙颍河畔，交通便利，土地肥沃，物产丰富。全村共有500多口人，耕地面积2000多亩，
+                        是一个典型的农业村庄。近年来，在村两委的带领下，小杜庄村大力发展特色农业，积极推进乡村振兴，村民生活水平显著提高，
+                        村容村貌焕然一新。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        小杜庄村历史悠久，文化底蕴深厚，人杰地灵，人才辈出。这里不仅是优质农产品的产地，更是培养优秀人才的摇篮。
+                        勤劳智慧的小杜庄人用自己的双手创造了美好的生活，也为社会输送了大批优秀人才。
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-trophy text-secondary text-xl mr-3"></i>
+                                <h3 class="font-bold text-gray-800">特色农业示范村</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">西华县特色农业发展先进村</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-tree text-secondary text-xl mr-3"></i>
+                                <h3 class="font-bold text-gray-800">生态文明村</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">河南省生态文明建设示范村</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-users text-secondary text-xl mr-3"></i>
+                                <h3 class="font-bold text-gray-800">和谐文明村</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">周口市和谐文明创建先进单位</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-line-chart text-secondary text-xl mr-3"></i>
+                                <h3 class="font-bold text-gray-800">乡村振兴示范村</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">河南省乡村振兴试点村</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071b5f0a9a?w=800&h=600&fit=crop" alt="村庄风貌" class="rounded-xl shadow-xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fa fa-map-marker text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">地理位置</p>
+                                    <p class="font-bold text-gray-800">河南省·西华县·逍遥镇</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色产业 -->
+    <section id="industries" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">特色产业</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 mt-2">特色农业兴旺 农民增产增收</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    小杜庄村大力发展特色高效农业，形成了以甜瓜、辣椒、西瓜为主导的特色产业体系，农产品品质优良，畅销全国各地
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587049352849-769327868995?w=600&h=400&fit=crop" alt="甜瓜产业" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-lemon-o text-yellow-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">甜瓜产业</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            小杜庄甜瓜种植历史悠久，土壤肥沃，光照充足，所产甜瓜甜度高、口感脆、香味浓，是国家地理标志产品，种植面积达500多亩，年产值超800万元。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">种植面积：500+亩</span>
+                            <span class="text-secondary font-medium">年产值：800万+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586788224331-947f68671cf1?w=600&h=400&fit=crop" alt="辣椒产业" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-pepper-hot text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">辣椒产业</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            小杜庄辣椒色泽鲜艳、辣度适中、香味浓郁，是逍遥胡辣汤的重要原料。种植面积达600多亩，产品远销湖南、四川、重庆等地，年产值超1000万元。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">种植面积：600+亩</span>
+                            <span class="text-secondary font-medium">年产值：1000万+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587049352851-8d5e97d94367?w=600&h=400&fit=crop" alt="西瓜产业" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-watermelon text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">西瓜产业</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            小杜庄西瓜皮薄瓤甜、汁多味美，含糖量高，深受消费者喜爱。种植面积达400多亩，采用无公害种植技术，是豫东地区有名的西瓜产区，年产值超600万元。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">种植面积：400+亩</span>
+                            <span class="text-secondary font-medium">年产值：600万+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-primary/5 rounded-xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">产业兴 百姓富</h3>
+                        <p class="text-gray-600">特色产业带动村民人均年收入突破2万元，实现了农业增效、农民增收、农村繁荣的良好局面。</p>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-primary mb-1">85%</div>
+                                <p class="text-sm text-gray-600">农户参与特色种植</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-primary mb-1">2.2万</div>
+                                <p class="text-sm text-gray-600">人均年收入（元）</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-primary mb-1">100%</div>
+                                <p class="text-sm text-gray-600">脱贫户实现稳定增收</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 杰出人才 -->
+    <section id="talents" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">杰出人才</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 mt-2">人杰地灵 人才辈出</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    小杜庄村历来重视教育，文化氛围浓厚，培养出了一大批优秀人才，他们在各行各业取得了卓越成就，为家乡争光添彩
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3">
+                        <div class="h-full">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=face" alt="杜国楹" class="w-full h-full object-cover">
+                        </div>
+                        <div class="col-span-2 p-8">
+                            <div class="mb-6">
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">杰出企业家代表</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mt-3 mb-2">杜国楹</h3>
+                                <p class="text-gray-500">小罐茶创始人、董事长</p>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                杜国楹先生是小杜庄村走出去的杰出企业家代表，他创立的小罐茶品牌，重新定义了中国茶行业，推动了中国茶产业的现代化、标准化、品牌化发展。
+                                作为连续创业者，他先后创立了多个知名品牌，是中国知名的企业家和产品创新专家。
+                            </p>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                杜国楹先生致富不忘家乡，多年来一直关心支持家乡发展，在教育、扶贫、乡村振兴等方面做出了重要贡献，是小杜庄村的骄傲和榜样。
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="flex items-center">
+                                    <i class="fa fa-trophy text-secondary mr-2"></i>
+                                    <span class="text-sm text-gray-600">中国茶行业领军人物</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa fa-building text-secondary mr-2"></i>
+                                    <span class="text-sm text-gray-600">小罐茶品牌创始人</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa fa-heart text-secondary mr-2"></i>
+                                    <span class="text-sm text-gray-600">乡村振兴爱心大使</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start">
+                            <img src="https://picsum.photos/id/1005/100/100" alt="优秀人才" class="w-20 h-20 rounded-full object-cover mr-6">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">杜新建</h4>
+                                <p class="text-primary font-medium mb-3">农业技术专家</p>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    高级农艺师，多年来致力于农业技术推广，为家乡特色农业发展提供技术支持，帮助村民科学种植，增产增收。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start">
+                            <img src="https://picsum.photos/id/1006/100/100" alt="优秀人才" class="w-20 h-20 rounded-full object-cover mr-6">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">杜国强</h4>
+                                <p class="text-primary font-medium mb-3">教育工作者</p>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    知名中学校长，从事教育工作30多年，培养了大批优秀人才，关心支持家乡教育事业发展。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 龙头企业 -->
+    <section id="enterprises" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">龙头企业</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 mt-2">产业带动 就业富民</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    小杜庄村大力培育本土企业，以产业发展带动就业，实现了"家门口就业，挣钱顾家两不误"的良好局面
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-accent/5 to-primary/5 rounded-xl overflow-hidden shadow-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-10">
+                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">市级农业产业化龙头企业</span>
+                        <h3 class="text-3xl font-bold text-gray-800 mt-4 mb-4">晟源农业合作社</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            晟源农业合作社成立于2015年，是小杜庄村本土成长起来的明星企业，主要从事玉米芯收储加工、粮食收储、生物质燃料生产等业务。
+                            合作社采用"合作社+农户"的发展模式，带动周边农户共同发展。
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-recycle text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">玉米芯深加工</h4>
+                                    <p class="text-sm text-gray-600">年加工玉米芯5万吨，生产的糠醛、木糖醇等产品畅销国内外</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-wheat-awn text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">粮食收储</h4>
+                                    <p class="text-sm text-gray-600">年粮食收储量达10万吨，有效解决了周边农户卖粮难问题</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-users text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">带动就业</h4>
+                                    <p class="text-sm text-gray-600">直接吸纳本地劳动力200多人，间接带动上下游产业就业1000多人</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-accent mb-1">5万吨</div>
+                                <p class="text-xs text-gray-600">年加工玉米芯</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-accent mb-1">10万吨</div>
+                                <p class="text-xs text-gray-600">年粮食收储量</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-accent mb-1">200+</div>
+                                <p class="text-xs text-gray-600">带动就业岗位</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-full min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop" alt="晟源农业合作社" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 美丽乡村 -->
+    <section id="gallery" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">美丽乡村</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 mt-2">生态宜居 乡风文明</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    小杜庄村在发展经济的同时，大力推进美丽乡村建设，村容村貌焕然一新，村民生活环境显著改善
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1518780660439-4636190af475?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1500930967156-8c780972fc08?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1464226184883-f2c3de66756b?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1533050487297-09b450131914?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1516214104633-6367ca0a4961?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
                 <div class="aspect-square overflow-hidden rounded-xl shadow-md group">
                     <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=600&fit=crop" alt="乡村美景" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
